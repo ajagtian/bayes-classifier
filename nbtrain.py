@@ -9,7 +9,7 @@ def	readfile(filename):
 		f = open(filename, 'rU', errors = 'ignore')
 		text =f.read()
 		f.close()
-		return text.replace('\n',' ');
+		return text.replace('\n',' ').replace('\r','');
 
 
 def	create_training_file(dir, dest_file):
@@ -18,18 +18,20 @@ def	create_training_file(dir, dest_file):
 		
 		filenames = os.listdir(dir)
 		out_file_handle  = open(dest_file, 'w')
+		lines = []
 		for file in filenames:
 			filetext = readfile(os.path.join(dir, file))
-			append_to_file(out_file_handle, file, filetext)
+			lines = append_to_file(file, filetext, lines)
+		out_file_handle.writelines(lines)
 		out_file_handle.close()
 
 
-def	append_to_file(filehandle, filename, filetext):
+def	append_to_file(filename, filetext, lines):
 		"""appends a line to the training file"""
-
-		filehandle.write(filename[:filename.find('.')]+' '+filetext+'\n')		
+		#lines.append(filename[:filename.find('.')]+' '+filetext+'\n')		
 		## to create a test file, uncomment following line, and comment the above one
-		##filehandle.write(filetext+'\n')
+		lines.append(filetext+'\n')
+		return lines
 		
 
 def	main():

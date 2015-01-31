@@ -26,8 +26,7 @@ def	hash_line(line, global_hash, count_hash):
 		count_hash[clazz] = clazz_count
 
 		return (global_hash, count_hash)
-		
-		
+				
 
 def	hash_file(filename):
 		f_handle = open(filename, 'rU', errors = 'ignore')
@@ -42,7 +41,7 @@ def	hash_file(filename):
 		document_count = {}
 		for line in lines:
 			clazz = line[:line.find(' ')]
-			if clazz in document_count:
+			if clazz in document_count.keys():
 				document_count[clazz] += 1
 			else:
 				document_count[clazz] = 1
@@ -59,7 +58,11 @@ def 	get_probabilities(global_hash, count_hash):
 			current_hash = global_hash[clazz]
 			for word in current_hash.keys():
 				h1[word] = math.log(current_hash[word] / count_hash[clazz], 10)
-				h2[word] = math.log((current_hash[word]+1) / (count_hash[clazz] + len(current_hash)),10)
+				h2[word] = math.log((current_hash[word]+1) / (count_hash[clazz] + len(current_hash.keys())),10)
+				#h1[word] = current_hash[word] / count_hash[clazz]
+				#h2[word] = (current_hash[word] + 1) / (count_hash[clazz] + len(current_hash.keys()))
+			h2['zero'] = math.log(1 / (count_hash[clazz] + len(current_hash)+1), 10)
+			#h2['zero'] = 1 / (count_hash[clazz] + len(curent_hash)+1)
 			g_hash1[clazz] = h1
 			g_hash2[clazz] = h2
 		return (g_hash1, g_hash2)
@@ -73,6 +76,7 @@ def	get_document_probabilities(document_count):
 
 		for document in document_count.keys():
 			document_probability[document] = math.log(document_count[document] / count,10)
+			#document_probability[document] = document_count[document] / count
 			
 		return document_probability
 
@@ -89,6 +93,7 @@ def	generate_model_file(training_file_name, model_file):
 		model_file_handle.write(str(segment3))
 		model_file_handle.close()
 
+
 def	main():
 		args =	sys.argv[1:]
 		if len(args) != 2:
@@ -99,9 +104,4 @@ def	main():
 			
 
 if __name__ == '__main__':
-	main()
-		
-	
-		
-
-			
+	main()			
