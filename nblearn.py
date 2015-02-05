@@ -16,6 +16,7 @@ def	hash_line(line, global_hash, count_hash):
 		line = line[sep+1:]
 		words = re.findall(r'(\w+)', line);
 		for word in words:
+			word = word.lower()
 			clazz_count += 1
 			if word in hash.keys():
 				hash[word] += 1

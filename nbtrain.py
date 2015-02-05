@@ -28,9 +28,9 @@ def	create_training_file(dir, dest_file):
 
 def	append_to_file(filename, filetext, lines):
 		"""appends a line to the training file"""
-		#lines.append(filename[:filename.find('.')]+' '+filetext+'\n')		
+		lines.append(filename[:filename.find('.')]+' '+filetext+'\n')		
 		## to create a test file, uncomment following line, and comment the above one
-		lines.append(filetext+'\n')
+		#lines.append(filetext+'\n')
 		return lines
 		
 

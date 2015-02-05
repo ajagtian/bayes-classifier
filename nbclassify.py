@@ -21,6 +21,7 @@ def	vocab(line):
 
 def	need_smoothing(line_vocab, document):
 		for word in line_vocab:
+			word = word.lower()
 			if document.get(word):
 				continue
 			else:
@@ -42,7 +43,7 @@ def	get_lines(test_file_name):
 def	classify_lines(filelines, probability_hash, smoothed_hash, document_probability):
 		classes = ''
 		for line in filelines:
-			classes += classify_line(line, probability_hash,smoothed_hash, document_probability) + '\n'
+			classes += classify_line(line, probability_hash,smoothed_hash, document_probability).strip() + '\n'
 		return classes
 
 	
@@ -63,6 +64,7 @@ def	classify_line_(line, hash, doc_prob):
 			current_probs = hash[clazz]
 			prob[clazz] = 0
 			for word in vocab(line):
+				word = word.lower()
 				if current_probs.get(word):
 					prob[clazz] += current_probs[word]
 				else:
@@ -74,12 +76,15 @@ def	classify_line_(line, hash, doc_prob):
 def	main():
 		args = sys.argv[1:]
 		if(len(args) != 2):
-			print('usage: ./nbclassify <model_file> <test_file> <output_file>')
+			print('usage: ./nbclassify <model_file> <test_file>')
 			sys.exit(0)
 		(probability_hash, smoothed_hash, document_probability) = modelfile_to_hash(args[0])
 		lines = get_lines(args[1])
 		classes = classify_lines(lines, probability_hash, smoothed_hash, document_probability)
-		print(classes)
+		print(classes[:-1])
+		f = open(args[0][:-2]+'out', 'w')
+		f.write(classes)
+		f.close()		
 		
 
 if __name__ == '__main__':
