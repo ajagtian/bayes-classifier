@@ -6,11 +6,11 @@ HW1, Naive Bayes, CSCI 544
 
 #### PART 1 ####
 
-nbrain.py - created a trainging file from directory of laerning examples
-nblearn.py - learns from a training file to create model file
-nbclassify.py - classifies files as some class, based on learnin
+*nbrain.py - creates a trainging file from directory of learning examples
+*nblearn.py - learns from a training file to create model file
+*nbclassify.py - classifies files as some class, based on learning
 
-* all scripts take command line arguments as was in the specification document. Other utility scripts print there usage on wrong use.
+* all scripts take command line arguments as per the specification document. Other utility scripts print their usage on wrong use.
 
 --------------------------
 PART 1 - Scores on dev set
@@ -21,7 +21,7 @@ SPAM:
 	recall: 0.9701897018970189
 	f_score: 0.9701897018970189
 
-HAM
+HAM:
 	precision: 0.9949698189134809
 	recall: 0.9949698189134809
 	f_score: 0.9949698189134809
