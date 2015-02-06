@@ -15,6 +15,7 @@ HW1, Naive Bayes, CSCI 544
 #### PART 2 ####
 
 * SVMLite implementation
+* MegaM implementation
 
 ### PART 3 ###
 > What are the precision, recall and F-score on the development data for your classifier in part I for each of the two datasets. Report precision, recall and F-score for each label.
@@ -35,11 +36,21 @@ HAM:
 	recall: 0.9949698189134809
 	f_score: 0.9949698189134809
 
+
+POS:
+	precision: 0.9269819193324061
+	recall: 0.9269819193324061
+	f_score: 0.9269819193324061
+NEG:
+	precision: 0.8639596917605217
+	recall: 0.8639596917605217
+	f_score: 0.8639596917605217
+
 > What are the precision, recall and F-score for your classifier in part II for each of the two datasets. Report precision, recall and F-score for each label.
 
 
 --------------------------
-PART 2 - Scores on dev set
+PART 2 (SVMLite)- Scores on dev set
 -------------------------
 SPAM:
 
@@ -54,6 +65,17 @@ HAM:
 	recall: 0.9631425800193987
 	f_score: 0.9631425800193987
 
+
+NEG:
+
+	precision: 0.9083463019084282
+	recall: 0.9083463019084282
+	f_score: 0.9083463019084282
+
+POS:
+	precision: 0.8897662418888281
+	recall: 0.8897662418888281
+	f_score: 0.8897662418888281
 
 > What happens exactly to precision, recall and F-score in each of the two tasks (on the development data) when only 10% of the training data is used to train the classifiers in part I and part II? Why do you think that is?
 
