@@ -16,10 +16,12 @@ def	traverse(in_lines, out_lines, clazz):
 		return (correct_guess, total_guess, total_count)
 
 def	precision(correct_guess, total_guess):
+		print('precision: '+str(correct_guess / total_guess))
 		return correct_guess / total_guess
 
 
 def	recall(correct_guess, total_count):
+		print ('recall: '+str(correct_guess / total_count))
 		return correct_guess / total_count
 
 
