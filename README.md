@@ -71,10 +71,12 @@ Here are the results under less (10%) training...
 Naive Bayes:
 
 SPAM:
+
 	precision: 0.26424870466321243
 	recall: 0.26424870466321243
 	f_score: 0.26424870466321243
 HAM:
+
 	precision: 0.7328556806550666
 	recall: 0.7328556806550666
 	f_score: 0.7328556806550666
