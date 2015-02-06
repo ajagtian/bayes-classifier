@@ -6,7 +6,7 @@ HW1, Naive Bayes, CSCI 544
 
 #### PART 1 ####
 
-* nbrain.py - creates a trainging file from directory of learning examples.
+* nbtrain.py - creates a trainging file from directory of learning examples.
 * nblearn.py - learns from a training file to create model file.
 * nbclassify.py - classifies files as some class, based on learning.
 
@@ -26,3 +26,27 @@ HAM:
 	precision: 0.9949698189134809
 	recall: 0.9949698189134809
 	f_score: 0.9949698189134809
+
+
+#### PART 2 ####
+
+------------------------
+* SVMLite implementation
+------------------------
+
+--------------------------
+PART 2 - Scores on dev set
+-------------------------
+SPAM:
+
+	precision: 0.9789156626506024
+	recall: 0.9789156626506024
+	f_score: 0.9789156626506024
+
+
+HAM:
+	
+	precision: 0.9631425800193987
+	recall: 0.9631425800193987
+	f_score: 0.9631425800193987
+
