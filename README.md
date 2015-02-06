@@ -81,6 +81,36 @@ POS:
 	recall: 0.8897662418888281
 	f_score: 0.8897662418888281
 
+
+--------------------------
+PART 2(Megam) - Scores on dev set
+-------------------------
+SPAM:
+
+	precision: 0.9701297018970189
+	recall: 0.9701297018970189
+	f_score: 0.9701297018970189
+
+HAM:
+	
+	precision: 0.969698189134809
+	recall: 0.9649698189134809
+	f_score: 0.9649698189134809
+
+
+POS:
+
+	precision: 0.8669819193324061
+	recall: 0.8669819193324061
+	f_score: 0.8669819193324061
+
+NEG:
+
+	precision: 0.8639596917605217
+	recall: 0.8639596917605217
+	f_score: 0.8639596917605217
+
+
 > What happens exactly to precision, recall and F-score in each of the two tasks (on the development data) when only 10% of the training data is used to train the classifiers in part I and part II? Why do you think that is?
 
 * When the training data will be reduced, most of the files would be classifed as SPAM. The precision recall and f_score would decrease (tend towads zero ) for SPAM and tend towards 1 for HAM.
