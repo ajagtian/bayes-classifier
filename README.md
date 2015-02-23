@@ -51,13 +51,21 @@ sentiment.svm.out	|
 
 
 ## MegaM  ##
+
 --for binary classification
+
 *Instructions*
+
 * Install megaM
+
 * Create a training_file with formattings as requried by MegaM
+
 * learn from training data
+
 > './megam.opt binary <training_file> >> <model_file>'
+
 * classify test data [test file for megaM would be same as SVM]
+
 > './megam.opt -predict <model_file> binary <test_file> | head -<size of test data> >> <out_file>'
 
 
