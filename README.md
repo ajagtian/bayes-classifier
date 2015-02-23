@@ -2,27 +2,67 @@ HW1, Naive Bayes, CSCI 544
 
 --------------------------------
 
-*** Please consider the files that were reuqired to be submitted, other scripts were developed as helper scripts to do score calculations and other stuff.***
+* > all scripts take command line arguments as per the specification document. Other utility scripts print their usage on wrong use.
 
-#### PART 1 ####
+#### NAIVE BAYES CLASSIFIER  ####
 
-* nbtrain.py - creates a trainging file from directory of learning examples.
-* nblearn.py - learns from a training file to create model file.
-* nbclassify.py - classifies files as some class, based on learning.
+*Instructions...*
 
-* all scripts take command line arguments as per the specification document. Other utility scripts print their usage on wrong use.
+*1. Learn
+*Need a trainig file to perform supervised learning, and make model file as follows
 
-#### PART 2 ####
+>'./nblearn.py <training_file> <model_file>'
 
-* SVMLite implementation
-* MegaM implementation
+*From model file, classify a test file
+
+>'./nbclassify <model_file> <test_file>'
+
+*primary files
+file      	|
+-----------------
+nblearn.py	|
+nbclassify.py	|
+spam.nb		|
+spam.out	|
+sentiment.nb	|
+sentiment.out	|
+
+#### SVM LITE ####
+
+*Instructions*
+*Create a nicely formatted training_file and test_file
+*Fromtraining file create model file
+>'./svm_learn <training_file> <model_file>'
+*From model_file classify a test set
+>'./svm_classify <model_file> <out_file>'
+
+
+* primary files
+file      		|
+------------------------
+spam.svm.mode		|
+spam.svm.out		|
+sentiment.sv.model	|
+sentiment.svm.out	|
+
+
+## MegaM  ##
+--for binary classification
+*Instructions*
+* Install megaM
+* Create a training_file with formattings as requried by MegaM
+* learn from training data
+> './megam.opt binary <training_file> >> <model_file>'
+* classify test data [test file for megaM would be same as SVM]
+> './megam.opt -predict <model_file> binary <test_file> | head -<size of test data> >> <out_file>'
+
 
 ### PART 3 ###
 > What are the precision, recall and F-score on the development data for your classifier in part I for each of the two datasets. Report precision, recall and F-score for each label.
 
 
 --------------------------
-PART 1 - Scores on dev set
+Naive Bayes - Scores on dev set
 -------------------------
 SPAM:
 
@@ -53,7 +93,7 @@ NEG:
 
 
 --------------------------
-PART 2 (SVMLite)- Scores on dev set
+(SVMLite)- Scores on dev set
 -------------------------
 SPAM:
 
@@ -83,7 +123,7 @@ POS:
 
 
 --------------------------
-PART 2(Megam) - Scores on dev set
+(Megam) - Scores on dev set
 -------------------------
 SPAM:
 
