@@ -8,17 +8,18 @@ HW1, Naive Bayes, CSCI 544
 
 *Instructions...*
 
-*1. Learn
+*1. Learn:
+
 *Need a trainig file to perform supervised learning, and make model file as follows
 
 >'./nblearn.py <training_file> <model_file>'
 
-*From model file, classify a test file
+*2. From model file, classify a test file
 
 >'./nbclassify <model_file> <test_file>'
 
-*primary files
-file      	|
+*primary files:
+
 -----------------
 nblearn.py	|
 nbclassify.py	|
@@ -29,16 +30,19 @@ sentiment.out	|
 
 #### SVM LITE ####
 
-*Instructions*
-*Create a nicely formatted training_file and test_file
-*Fromtraining file create model file
->'./svm_learn <training_file> <model_file>'
-*From model_file classify a test set
->'./svm_classify <model_file> <out_file>'
+*Instructions...*
+
+* Create a nicely formatted training_file and test_file
+
+* From training file create model file
+
+> './svm_learn <training_file> <model_file>'	
+
+* From model_file classify a test set
+> './svm_classify <model_file> <out_file>'
 
 
 * primary files
-file      		|
 ------------------------
 spam.svm.mode		|
 spam.svm.out		|
