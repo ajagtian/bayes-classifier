@@ -1,0 +1,15 @@
+List of changes...
+
+SVM...
+1. Previously, when creating test_file (on which classification is done) from test_dir, I did not sort the input files by name, hence the test file lines were random and due to which classification done was not in the same order as in test dir.
+
+To correct this a minor change of sorting file names when reading from directoty was made to preserve the order.
+change made make_training_file.py [line: 73]
+
+2. Some file re-names to make more sense of their use.
+
+
+MegaM....
+
+
+1. model file for sentiment was left to be pushed to bitbucket repository. In this iteration of submission, I have changed the way I format training files, created new model files and new output files.

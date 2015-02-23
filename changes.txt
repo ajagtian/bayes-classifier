@@ -1,0 +1,9 @@
+Following is the list of changes...
+
+1. while creating test file (from which classification is to be done), I did not extensively sort the files when reading from directory (assuming that files will be fetched in a sorted manner). Hence as the input was random, output came out jumbled as well.
+
+So a minor change of sorting the files by name was done when creating test_file so that out_file contains classes in the same order as in test dir.
+
+change is made in nbtrain.py [line : 19], which is my script to create test_file
+
+2. Other minor changes in the utility scripts that I have written, to calcuate f score, etc was made to make them more convenient.
