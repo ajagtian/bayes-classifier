@@ -1,12 +1,12 @@
 List of changes...
 
 SVM...
-1. Previously, when creating test_file (on which classification is done) from test_dir, I did not sort the input files by name, hence the test file lines were random and due to which classification done was not in the same order as in test dir.
+1. Previously, when creating test_file (on which classification is done) from test_dir, I did not sort the input files by name, hence the test file lines were random and due to which classification done was not in the same order as files in test dir.
 
 To correct this a minor change of sorting file names when reading from directoty was made to preserve the order.
-change made make_training_file.py [line: 73]
+change made in : make_training_file.py [line: 73] which is my script to make training file
 
-2. Some file re-names to make more sense of their use.
+2. Some utility script file re-names to make more depiction of their use.
 
 
 MegaM....
