@@ -1,6 +1,3 @@
-HW1, Naive Bayes, CSCI 544
-
---------------------------------
 
 * > all scripts take command line arguments as per the specification document. Other utility scripts print their usage on wrong use.
 
